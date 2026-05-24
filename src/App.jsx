@@ -1,0 +1,18 @@
+import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import Navigation from './components/Navigation'
+import HomePage from './pages/HomePage'
+import FamilyPage from './pages/FamilyPage'
+import GamePage from './pages/GamePage'
+
+export default function App() {
+  return (
+    <BrowserRouter>
+      <Navigation />
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+        <Route path="/family" element={<FamilyPage />} />
+        <Route path="/game" element={<GamePage />} />
+      </Routes>
+    </BrowserRouter>
+  )
+}
