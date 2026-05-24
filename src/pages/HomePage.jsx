@@ -37,16 +37,14 @@ const BENEFITS = [
 const PRODUCTS = [
   {
     name: 'Рыбные наггетсы',
-    emoji: '🐙',
     description:
-      'Весёлые фигурки в форме морских жителей — осьминожков, рыбок и звёздочек. Делают обед игрой: дети едят с удовольствием и просят ещё.',
+      'Весёлые фигурки в форме в форме рыбок, звездочек и сердечек. Делают обед игрой: дети едят с удовольствием и просят ещё.',
     detail: 'Для детей · Фигурные формы · Рыбное филе · Без костей',
     gradient: 'from-amber-400 to-orange-500',
     iconBg: 'bg-amber-100',
   },
   {
     name: 'Филе в панировке',
-    emoji: '🐟',
     description:
       'Цельный кусочек рыбного филе в хрустящей золотистой панировке. Сочное внутри, без лишнего — для тех, кто ценит настоящий вкус рыбы.',
     detail: 'Для подростков и взрослых · Классическая форма · Рыбное филе · Без костей',
@@ -98,7 +96,7 @@ export default function HomePage() {
             САНТИ
           </h1>
           <p className="text-xl md:text-2xl font-semibold mt-5 opacity-90 drop-shadow">
-            Вкусная рыбка для маленьких чемпионов 🐟
+            Рыбка, которую любят дети 🐟
           </p>
         </div>
 
@@ -247,7 +245,7 @@ export default function HomePage() {
                   to="/game"
                   className="inline-block bg-yellow-400 hover:bg-yellow-300 text-yellow-900 font-black px-8 py-3.5 rounded-2xl transition-all duration-200 hover:scale-105 hover:shadow-xl"
                 >
-                  🧩 Сыграть в мини-игру
+                  🧩 Играть!
                 </Link>
               </div>
 
@@ -283,7 +281,7 @@ export default function HomePage() {
             />
           </div>
           <p className="text-ocean-400 text-sm">
-            © 2024 Семья Санти. Вкусная рыбка для маленьких чемпионов 🐟
+            © 2026 Санти. Рыбка, которую любят дети 🐟 Зарецкая Дарья, ЭМ-5
           </p>
         </footer>
       </div>
