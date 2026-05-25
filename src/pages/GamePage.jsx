@@ -106,7 +106,7 @@ function WinScreen({ onReplay }) {
         <div className="text-7xl mb-4 animate-bounce">🎉</div>
         <h1 className="text-5xl font-black text-white mb-4 drop-shadow-lg">Ты молодец!</h1>
         <p className="text-white/75 text-lg max-w-xl mx-auto">
-          Пазл собран! Санти очень рад. А теперь — интересные факты о жителях океана:
+          Пазл собран! Санти говорит, что ты молодец!. А теперь — интересные факты о жителях океана:
         </p>
       </div>
 
