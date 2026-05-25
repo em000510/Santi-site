@@ -67,6 +67,7 @@ export default function HomePage() {
   const heroOpacity = 1 - heroProgress
   const heroScale = 1 - heroProgress * 0.08
 
+  const base = import.meta.env.BASE_URL;
   return (
     <div className="font-nunito">
       {/* ── HERO (fixed, fades on scroll) ─────────────────────────────── */}
@@ -79,7 +80,7 @@ export default function HomePage() {
         }}
       >
         <img
-          src="/gifs/main_hero.gif"
+          src={`${base}gifs/main_hero.gif`}
           alt="Санти"
           className="absolute inset-0 w-full h-full object-cover"
         />
@@ -144,7 +145,7 @@ export default function HomePage() {
             <div className="flex flex-col md:flex-row items-center gap-12 mb-24">
               <div className="flex-1 flex justify-center">
                 <img
-                  src="/images/main_family.png"
+                  src={`${base}images/main_family.png`}
                   alt="Семья Санти"
                   className="w-full max-w-sm drop-shadow-2xl animate-float"
                   onError={(e) => {
@@ -251,7 +252,7 @@ export default function HomePage() {
 
               <div className="flex-1 flex justify-center">
                 <img
-                  src="/images/main_fish.png"
+                  src={`${base}/images/main_fish.png`}
                   alt="Рыбные продукты"
                   className="w-full max-w-sm drop-shadow-2xl"
                   onError={(e) => {
@@ -274,7 +275,7 @@ export default function HomePage() {
         <footer className="bg-ocean-900 text-white py-10 text-center">
           <div className="flex items-center justify-center gap-3 mb-3">
             <img
-              src="/images/main_logo.png"
+              src={`${base}/images/main_logo.png`}
               alt="Санти"
               className="h-9 w-auto"
               onError={(e) => { e.target.style.display = 'none' }}
