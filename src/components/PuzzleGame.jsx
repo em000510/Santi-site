@@ -21,6 +21,7 @@ function makePieces() {
 }
 
 export default function PuzzleGame({ onWin }) {
+  const base = import.meta.env.BASE_URL;
   const [pieces, setPieces] = useState(makePieces)
   const [selected, setSelected] = useState(null)
   const [moves, setMoves] = useState(0)
@@ -75,7 +76,7 @@ export default function PuzzleGame({ onWin }) {
       <div className="flex items-center gap-3 mb-6">
         <span className="text-white/60 text-xs font-semibold uppercase tracking-wider">Образец:</span>
         <img
-          src="/images/puzzle_puzzle.png"
+         src={`${base}images/puzzle_puzzle.png`}
           alt="Образец пазла"
           className="w-16 h-16 rounded-lg object-cover border-2 border-white/30 shadow-lg"
           onError={(e) => { e.target.style.display = 'none' }}
@@ -111,7 +112,7 @@ export default function PuzzleGame({ onWin }) {
               style={{
                 width: PIECE_PX,
                 height: PIECE_PX,
-                backgroundImage: 'url(/images/puzzle_puzzle.png)',
+                backgroundImage: `url(${base}images/puzzle_puzzle.png)`,
                 backgroundSize: `${GRID * 100}% ${GRID * 100}%`,
                 backgroundPosition: `${srcCol * (100 / (GRID - 1))}% ${srcRow * (100 / (GRID - 1))}%`,
                 backgroundRepeat: 'no-repeat',
