@@ -11,10 +11,10 @@ const CHARACTERS = [
     cardBg: 'bg-orange-50',
     borderColor: 'border-orange-200',
     emoji: '🏄‍♀️',
-    traits: ['Заботливая', 'Жизнерадостная', 'Спортсменка'],
+    traits: ['Смелая', 'Жизнерадостная', 'Энергичная'],
     description:
-      'Заботливая мама и смелая спортсменка в одном лице. Весёлая и жизнерадостная с безграничной энергией. Увлекается сёрфингом и нутрициологией. Разработала рецепт вкусных и полезных рыбных наггетсов «Санти».',
-    fact: 'Придумала рецепт наггетсов прямо после утренней тренировки на серфе!',
+      'Заботливая мама и смелая спортсменка в одном лице. Заряжает своей энергией и оптимизмом всех вокруг. Увлекается сёрфингом и нутрициологией. Разработала рецепт вкусных и полезных рыбных наггетсов «Санти».',
+    fact: 'Имя Санни значит «солнечная»',
   },
   {
     id: 1,
@@ -28,8 +28,8 @@ const CHARACTERS = [
     emoji: '🔧',
     traits: ['Сильный', 'Спокойный', 'Надёжный'],
     description:
-      'Папа-изобретатель с «золотыми плавниками». Сильный, спокойный, надёжный и ответственный. Готов поддержать и помочь воплотить в жизнь любую смелую идею Санни и Санти. С ним семье не страшен никакой шторм.',
-    fact: 'Однажды построил сёрфборд для Санни из подручных материалов прямо на берегу.',
+      'Папа-изобретатель с «золотыми плавниками». Готов поддержать и помочь воплотить в жизнь любую смелую идею Санни и Санти. С ним семье не страшен никакой шторм.',
+    fact: 'Полное имя Тиши - Тихон. Оно значит «приносящий удачу».',
   },
   {
     id: 2,
@@ -44,11 +44,12 @@ const CHARACTERS = [
     traits: ['Любопытный', 'Милый', 'Добрый'],
     description:
       'Любопытный малыш, что всегда рад новому другу. На 100% состоит из милоты. Любит путешествовать с родителями, рисовать и узнавать новое о морских обитателях.',
-    fact: 'Знает названия более 30 морских животных и может рассказать о каждом!',
+    fact: 'Имя Санти родители придумали, объединив свои.',
   },
 ]
 
 export default function FamilyPage() {
+  const base = import.meta.env.BASE_URL;
   const [current, setCurrent] = useState(0)
   const [animating, setAnimating] = useState(false)
   const [dir, setDir] = useState('right')
@@ -89,7 +90,7 @@ export default function FamilyPage() {
 
           <div className="flex-shrink-0">
             <img
-              src="/images/lore_family.png"
+              src={`${base}images/lore_family.png`}
               alt="Семья Санти"
               className="h-64 md:h-72 w-auto drop-shadow-2xl"
               onError={(e) => {
@@ -132,14 +133,14 @@ export default function FamilyPage() {
                 <div className="flex-shrink-0">
                   {char.isVideo ? (
                     <img
-                      src={char.src}
+                      src={`${base}${char.src.slice(1)}`}
                       alt={char.name}
                       className="w-52 h-52 rounded-2xl object-cover shadow-2xl"
                     />
                   ) : (
                     <>
                       <img
-                        src={char.src}
+                        src={`${base}${char.src.slice(1)}`}
                         alt={char.name}
                         className="w-52 h-52 object-contain drop-shadow-2xl"
                         onError={(e) => {
