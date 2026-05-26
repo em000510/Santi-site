@@ -82,7 +82,7 @@ export default function HomePage() {
         <img
           src={`${base}gifs/main_hero.gif`}
           alt="Санти"
-          className="absolute inset-0 w-full h-full object-cover"
+          className="absolute top-0 right-0 bottom-0 w-full sm:w-2/3 lg:w-1/2 h-full object-cover"
         />
 
         {/* Dark gradient overlay */}
