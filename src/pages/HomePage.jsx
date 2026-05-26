@@ -88,17 +88,17 @@ export default function HomePage() {
         {/* Dark gradient overlay */}
         <div className="absolute inset-0 bg-gradient-to-b from-ocean-900/30 via-transparent to-ocean-900/60" />
 
-         {/* Hero text */}
+        {/* Hero text */}
         <div className="absolute inset-0 flex flex-col justify-center items-start text-left px-8 md:px-16 lg:px-24 w-full md:w-1/2">
           <p className="text-lg font-bold uppercase tracking-widest opacity-80 mb-3">
             Знакомьтесь — семья
           </p>
-         <h1 className="text-8xl md:text-[10rem] font-black leading-none drop-shadow-2xl">
+          <h1 className="text-8xl md:text-[10rem] font-black leading-none drop-shadow-2xl">
             САНТИ
-         </h1>
-         <p className="text-xl md:text-2xl font-semibold mt-5 opacity-90 drop-shadow">
+          </h1>
+          <p className="text-xl md:text-2xl font-semibold mt-5 opacity-90 drop-shadow">
             Рыбка, которую любят дети 🐟
-         </p>
+          </p>
         </div>
 
         {/* Scroll hint */}
