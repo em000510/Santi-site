@@ -130,18 +130,14 @@ export default function FamilyPage() {
             <div className={`bg-gradient-to-r ${char.gradient} p-8`}>
               <div className="flex flex-col sm:flex-row items-center sm:items-start gap-8">
                {/* Avatar */}
-               <div className="flex-shrink-0">
-                 {char.isVideo ? (
-                 // Блок для видео (мама и Санти)
-                   <img
-                     src={`${base}${char.src.slice(1)}`}
-                     alt={char.name}
-                     className={`rounded-2xl object-cover shadow-2xl ${
-                     char.name === 'Санни' ? 'w-72 h-72' : 'w-52 h-52'
-                     }`}
-                   />
-                 ) : (
-                    <>
+                <div className="flex-shrink-0">
+                  {char.isVideo ? (
+                    <img
+                      src={`${base}${char.src.slice(1)}`}
+                      alt={char.name}
+                      className="w-52 h-52 rounded-2xl object-cover shadow-2xl"
+                    />
+                  ) : (
                       <img
                         src={`${base}${char.src.slice(1)}`}
                         alt={char.name}
