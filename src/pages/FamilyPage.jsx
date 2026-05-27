@@ -138,6 +138,7 @@ export default function FamilyPage() {
                       className="w-52 h-52 rounded-2xl object-cover shadow-2xl"
                     />
                   ) : (
+                    <>
                       <img
                         src={`${base}${char.src.slice(1)}`}
                         alt={char.name}
