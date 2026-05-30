@@ -135,7 +135,10 @@ export default function FamilyPage() {
                     <img
                       src={`${base}${char.src.slice(1)}`}
                       alt={char.name}
-                      className="max-w-full h-auto" 
+                       className={`
+                         ${char.id === 0 ? 'w-52 h-52' : char.id === 1 ? 'w-85 h-85' : 'w-72 h-72'}
+                         object-contain
+                       `}
                     />
                   ) : (
                     <>
