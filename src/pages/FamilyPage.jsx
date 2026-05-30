@@ -139,7 +139,6 @@ export default function FamilyPage() {
                          object-cover
                        `}
                     />
-                        {char.emoji}
                       </div>
 
                 {/* Name + traits */}
