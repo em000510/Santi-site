@@ -139,14 +139,8 @@ export default function FamilyPage() {
                          object-cover
                        `}
                     />
-                      <div
-                        style={{ display: 'none' }}
-                        className="w-52 h-52 rounded-2xl bg-white/30 flex items-center justify-center text-8xl"
-                      >
                         {char.emoji}
                       </div>
-                    </>
-                  )}
                 </div>
 
                 {/* Name + traits */}
