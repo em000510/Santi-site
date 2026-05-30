@@ -91,7 +91,7 @@ export default function HomePage() {
         {/* Hero text */}
          <div className="absolute inset-0 flex flex-col justify-center items-start px-8 md:px-16 lg:px-24 w-full md:w-1/2">
          {/* Внутренний контейнер, который центрирует строки относительно «САНТИ» */}
-           <div className="flex flex-col items-center text-center w-full relative left-[1cm]">
+           <div className="flex flex-col items-center text-center w-full relative left-[2cm]">
                <p className="text-lg font-bold uppercase tracking-widest opacity-80 mb-3">
                  Знакомьтесь — семья
                </p>
