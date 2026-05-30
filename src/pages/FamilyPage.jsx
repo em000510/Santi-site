@@ -20,8 +20,8 @@ const CHARACTERS = [
     id: 1,
     name: 'Тиша',
     role: 'Папа · Изобретатель · Надёжная опора',
-    isVideo: false,
-    src: '/images/lore_dad.png',
+    isVideo: true,
+    src: '/gifs/Dad.gif',
     gradient: 'from-blue-400 to-indigo-500',
     cardBg: 'bg-blue-50',
     borderColor: 'border-blue-200',
@@ -136,7 +136,7 @@ export default function FamilyPage() {
                       src={`${base}${char.src.slice(1)}`}
                       alt={char.name}
                        className={`
-                         ${char.id === 0 ? 'w-52 h-52' : char.id === 1 ? 'w-85 h-85' : 'w-72 h-72'}
+                         ${char.id === 0 ? 'w-72 h-72' : char.id === 1 ? 'w-85 h-85' : 'w-52 h-52'}
                          object-contain
                        `}
                     />
