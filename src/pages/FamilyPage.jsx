@@ -141,7 +141,6 @@ export default function FamilyPage() {
                     />
                         {char.emoji}
                       </div>
-                </div>
 
                 {/* Name + traits */}
                 <div className="text-white flex-1 text-center sm:text-left">
