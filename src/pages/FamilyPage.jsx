@@ -136,7 +136,7 @@ export default function FamilyPage() {
                       src={`${base}${char.src.slice(1)}`}
                       alt={char.name}
                        className={`
-                         ${char.id === 0 ? 'w-72 h-72' : char.id === 1 ? 'w-85 h-85' : 'w-52 h-52'}
+                         ${char.id === 0 ? 'w-[286px] h-[286px]' : char.id === 1 ? 'w-[338px] h-[338px]' : 'w-52 h-52'}
                          object-contain
                        `}
                     />
