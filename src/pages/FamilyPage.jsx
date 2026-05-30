@@ -131,26 +131,14 @@ export default function FamilyPage() {
               <div className="flex flex-col sm:flex-row items-center sm:items-start gap-8">
                {/* Avatar */}
                 <div className="flex-shrink-0">
-                  {char.isVideo ? (
                     <img
                       src={`${base}${char.src.slice(1)}`}
                       alt={char.name}
                        className={`
                          ${char.id === 0 ? 'w-[286px] h-[286px]' : char.id === 1 ? 'w-[338px] h-[338px]' : 'w-52 h-52'}
-                         object-contain
+                         object-cover
                        `}
                     />
-                  ) : (
-                    <>
-                      <img
-                        src={`${base}${char.src.slice(1)}`}
-                        alt={char.name}
-                        className="w-52 h-52 object-contain drop-shadow-2xl"
-                        onError={(e) => {
-                          e.currentTarget.style.display = 'none'
-                          e.currentTarget.nextElementSibling.style.display = 'flex'
-                        }}
-                      />
                       <div
                         style={{ display: 'none' }}
                         className="w-52 h-52 rounded-2xl bg-white/30 flex items-center justify-center text-8xl"
