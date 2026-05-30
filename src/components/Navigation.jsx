@@ -4,7 +4,7 @@ import { Link, useLocation } from 'react-router-dom'
 const LINKS = [
   { to: '/', label: 'Главная' },
   { to: '/family', label: 'Семья Санти' },
-  { to: '/game', label: 'Мини-игра' },
+  { to: '/game', label: 'Играть!' },
 ]
 
 export default function Navigation() {
@@ -40,7 +40,7 @@ export default function Navigation() {
         <div className="max-w-5xl mx-auto px-6 py-3 flex items-center justify-between">
           <Link to="/" className="flex items-center gap-2 group">
             <img
-              src="/images/main_logo.png"
+              src={`${base}/images/main_logo.png`}
               alt="Санти"
               className="h-9 w-auto group-hover:scale-110 transition-transform duration-200"
               onError={(e) => { e.target.style.display = 'none' }}
