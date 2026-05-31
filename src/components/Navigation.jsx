@@ -10,7 +10,7 @@ const LINKS = [
 export default function Navigation() {
   const [visible, setVisible] = useState(false)
   const location = useLocation()
-  const base = import.meta.env.BASE_URL 
+  const base = import.meta.env.BASE_URL
 
   useEffect(() => {
     if (location.pathname !== '/') {
