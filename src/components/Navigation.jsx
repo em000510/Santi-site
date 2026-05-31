@@ -10,6 +10,7 @@ const LINKS = [
 export default function Navigation() {
   const [visible, setVisible] = useState(false)
   const location = useLocation()
+  const base = import.meta.env.BASE_URL 
 
   useEffect(() => {
     if (location.pathname !== '/') {
@@ -40,7 +41,7 @@ export default function Navigation() {
         <div className="max-w-5xl mx-auto px-6 py-3 flex items-center justify-between">
           <Link to="/" className="flex items-center gap-2 group">
             <img
-              src={`${base}/images/main_logo.png`}
+              src={`${base}images/main_logo.png`}
               alt="Санти"
               className="h-9 w-auto group-hover:scale-110 transition-transform duration-200"
               onError={(e) => { e.target.style.display = 'none' }}
