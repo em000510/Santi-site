@@ -5,8 +5,9 @@ import FamilyPage from './pages/FamilyPage'
 import GamePage from './pages/GamePage'
 
 export default function App() {
+  const base = import.meta.env.BASE_URL
   return (
-    <BrowserRouter>
+    <BrowserRouter basename={base}>
       <Navigation />
       <Routes>
         <Route path="/" element={<HomePage />} />
