@@ -164,7 +164,7 @@ function WinScreen({ onReplay }) {
                   {animal.emoji}
                 </div>
               </div>
-              <h3 className="text-3xl font-black text-white">{animal.animal}</h3>
+              <h3 className="text-3xl font-black text-white text-center">{animal.animal}</h3>
             </div>
 
             {/* Нижняя часть с фактом */}
