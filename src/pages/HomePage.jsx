@@ -51,7 +51,7 @@ export default function HomePage() {
   const base = import.meta.env.BASE_URL
   return (
     <div className="font-nunito">
-      {/* ── HERO (fixed, fades on scroll) ─────────────────────────────── */}
+      {/* HERO fixed */}
       <div
         className="fixed inset-0 z-10 pointer-events-none overflow-hidden"
         style={{
@@ -66,10 +66,8 @@ export default function HomePage() {
           className="absolute top-0 right-0 bottom-0 w-full sm:w-2/3 lg:w-1/2 h-full object-cover"
         />
 
-        {/* Dark gradient overlay */}
         <div className="absolute inset-0 bg-gradient-to-b from-ocean-900/30 via-transparent to-ocean-900/60" />
 
-        {/* Hero text */}
         <div className="absolute inset-0 flex flex-col justify-center items-start px-8 md:px-16 lg:px-24 w-full md:w-1/2">
           <div className="flex flex-col items-center text-center w-full relative left-[2cm]">
             <p className="text-lg font-bold uppercase tracking-widest opacity-80 mb-3">
@@ -86,7 +84,6 @@ export default function HomePage() {
           </div>
         </div>
 
-        {/* Scroll hint */}
         <div className="absolute bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 text-white/70 animate-bounce">
           <span className="text-xs font-semibold uppercase tracking-widest">Листай вниз</span>
           <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -95,12 +92,9 @@ export default function HomePage() {
         </div>
       </div>
 
-      {/* Spacer behind fixed hero */}
       <div className="h-screen" />
 
-      {/* ── MAIN CONTENT ──────────────────────────────────────────────── */}
       <div className="relative z-20">
-        {/* Ocean wave transition */}
         <div className="bg-ocean-900">
           <svg viewBox="0 0 1440 90" className="block w-full" preserveAspectRatio="none">
             <path
@@ -125,7 +119,7 @@ export default function HomePage() {
               </p>
             </div>
 
-            {/* Family block */}
+            {/* Family block (без кнопки) */}
             <div className="flex flex-col md:flex-row items-center gap-12 mb-24">
               <div className="flex-1 flex justify-center">
                 <img
@@ -152,6 +146,25 @@ export default function HomePage() {
                 <p className="text-ocean-700 text-lg leading-relaxed">
                   Мягкий вкус, удобная форма и отсутствие косточек делают знакомство с рыбой легким и позитивным с первых кусочков.
                 </p>
+                {/* Кнопка удалена отсюда */}
+              </div>
+            </div>
+
+            {/* Легенда бренда (белый фон + кнопка) */}
+            <div className="mb-24 bg-white rounded-3xl shadow-lg border border-ocean-100 overflow-hidden">
+              <div className="bg-gradient-to-r from-ocean-500 to-cyan-500 px-8 py-4">
+                <h3 className="text-2xl font-black text-white flex items-center gap-2">
+                  <span>🐧📖</span> Легенда бренда «Санти»
+                </h3>
+              </div>
+              <div className="p-8">
+                <p className="text-ocean-700 text-lg leading-relaxed mb-8">
+                  В далёком морозном крае жил энергичный пингвинёнок Санти, мечтавший о путешествиях и дружбе. 
+                  Вместе с мамой Санни и папой Тишей, изобретателем, он решил создать полезную и вкусную еду для детей — 
+                  рыбные полуфабрикаты в виде морских животных. Чтобы доставлять их по миру, Тиша построил чудо-корабль, 
+                  и с тех пор их путешествия были полны радостных встреч и открытий. Так появился бренд «Санти» — 
+                  символ дружбы, заботы и семейного тепла, приносящий детям здоровье и весёлое настроение.
+                </p>
                 <Link
                   to="/family"
                   className="inline-block bg-ocean-500 hover:bg-ocean-600 text-white font-black px-8 py-3.5 rounded-2xl transition-all duration-200 hover:scale-105 hover:shadow-xl"
@@ -161,37 +174,7 @@ export default function HomePage() {
               </div>
             </div>
 
-            {/* Legend block */}
-            <div className="mb-24 bg-gradient-to-br from-amber-50 to-orange-50 rounded-3xl shadow-xl overflow-hidden border border-amber-200">
-              <div className="relative">
-                {/* Декоративная волна */}
-                <div className="absolute top-0 left-0 w-full h-2 bg-gradient-to-r from-amber-400 to-orange-500" />
-                <div className="p-8 md:p-12">
-                  <div className="flex items-center gap-3 mb-6">
-                    <span className="text-5xl">🐧📖</span>
-                    <h3 className="text-3xl md:text-4xl font-black text-ocean-800">Легенда бренда «Санти»</h3>
-                  </div>
-                  <div className="relative">
-                    <div className="absolute -top-2 -left-2 text-7xl text-amber-300/30 select-none">«</div>
-                    <p className="text-ocean-700 text-lg md:text-xl leading-relaxed px-4 md:px-8 py-2 italic">
-                      В далёком морозном крае жил энергичный пингвинёнок Санти, мечтавший о путешествиях и дружбе. 
-                      Вместе с мамой Санни и папой Тишей, изобретателем, он решил создать полезную и вкусную еду для детей — 
-                      рыбные полуфабрикаты в виде морских животных. Чтобы доставлять их по миру, Тиша построил чудо-корабль, 
-                      и с тех пор их путешествия были полны радостных встреч и открытий. Так появился бренд «Санти» — 
-                      символ дружбы, заботы и семейного тепла, приносящий детям здоровье и весёлое настроение.
-                    </p>
-                    <div className="absolute -bottom-6 -right-2 text-7xl text-amber-300/30 select-none">»</div>
-                  </div>
-                  <div className="mt-8 flex justify-end">
-                    <span className="inline-block bg-amber-100 text-amber-800 text-sm font-bold px-4 py-2 rounded-full">
-                      🌟 Семья Санти
-                    </span>
-                  </div>
-                </div>
-              </div>
-            </div>
-            
-            {/* ── Benefits ──────────────────────────────────────────── */}
+            {/* Benefits */}
             <div className="mb-24 -mx-6 px-6 py-16 bg-gradient-to-br from-ocean-900 to-ocean-700 rounded-3xl">
               <div className="text-center mb-10">
                 <span className="inline-block bg-white/15 text-white text-xs font-black uppercase tracking-widest px-4 py-1.5 rounded-full mb-4">
@@ -220,7 +203,7 @@ export default function HomePage() {
               </div>
             </div>
 
-            {/* Fish + CTA block */}
+            {/* Fish + CTA */}
             <div className="flex flex-col md:flex-row items-center gap-12">
               <div className="flex-1 space-y-5">
                 <h3 className="text-3xl font-black text-ocean-800">Только лучшая рыба! 🌊</h3>
