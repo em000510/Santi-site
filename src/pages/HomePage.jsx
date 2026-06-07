@@ -161,6 +161,36 @@ export default function HomePage() {
               </div>
             </div>
 
+            {/* Legend block */}
+            <div className="mb-24 bg-gradient-to-br from-amber-50 to-orange-50 rounded-3xl shadow-xl overflow-hidden border border-amber-200">
+              <div className="relative">
+                {/* Декоративная волна */}
+                <div className="absolute top-0 left-0 w-full h-2 bg-gradient-to-r from-amber-400 to-orange-500" />
+                <div className="p-8 md:p-12">
+                  <div className="flex items-center gap-3 mb-6">
+                    <span className="text-5xl">🐧📖</span>
+                    <h3 className="text-3xl md:text-4xl font-black text-ocean-800">Легенда бренда «Санти»</h3>
+                  </div>
+                  <div className="relative">
+                    <div className="absolute -top-2 -left-2 text-7xl text-amber-300/30 select-none">«</div>
+                    <p className="text-ocean-700 text-lg md:text-xl leading-relaxed px-4 md:px-8 py-2 italic">
+                      В далёком морозном крае жил энергичный пингвинёнок Санти, мечтавший о путешествиях и дружбе. 
+                      Вместе с мамой Санни и папой Тишей, изобретателем, он решил создать полезную и вкусную еду для детей — 
+                      рыбные полуфабрикаты в виде морских животных. Чтобы доставлять их по миру, Тиша построил чудо-корабль, 
+                      и с тех пор их путешествия были полны радостных встреч и открытий. Так появился бренд «Санти» — 
+                      символ дружбы, заботы и семейного тепла, приносящий детям здоровье и весёлое настроение.
+                    </p>
+                    <div className="absolute -bottom-6 -right-2 text-7xl text-amber-300/30 select-none">»</div>
+                  </div>
+                  <div className="mt-8 flex justify-end">
+                    <span className="inline-block bg-amber-100 text-amber-800 text-sm font-bold px-4 py-2 rounded-full">
+                      🌟 Семья Санти
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
             {/* ── Benefits ──────────────────────────────────────────── */}
             <div className="mb-24 -mx-6 px-6 py-16 bg-gradient-to-br from-ocean-900 to-ocean-700 rounded-3xl">
               <div className="text-center mb-10">
