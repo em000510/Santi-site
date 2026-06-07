@@ -95,9 +95,11 @@ export default function HomePage() {
                <p className="text-lg font-bold uppercase tracking-widest opacity-80 mb-3">
                  Знакомьтесь — семья
                </p>
-                <h1 className="text-8xl md:text-[10rem] font-black leading-none drop-shadow-2xl">
-                 САНТИ
-                </h1>
+                <img
+                  src={`${base}images/main_logo.png`}
+                  alt="САНТИ"
+                  className="w-auto h-28 md:h-44 lg:h-52 drop-shadow-2xl"
+                />
                <p className="text-xl md:text-2xl font-semibold mt-5 opacity-90 drop-shadow">
                  Рыбка, которую любят дети 🐟
                </p>
