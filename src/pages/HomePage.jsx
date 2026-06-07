@@ -150,27 +150,31 @@ export default function HomePage() {
               </div>
             </div>
 
-            {/* Легенда бренда (белый фон + кнопка) */}
+                 {/* Легенда бренда (белый фон, кавычки, кнопка справа) */}
             <div className="mb-24 bg-white rounded-3xl shadow-lg border border-ocean-100 overflow-hidden">
-              <div className="bg-gradient-to-r from-ocean-500 to-cyan-500 px-8 py-4">
-                <h3 className="text-2xl font-black text-white flex items-center gap-2">
-                  <span>🐧📖</span> Легенда бренда «Санти»
-                </h3>
-              </div>
-              <div className="p-8">
-                <p className="text-ocean-700 text-lg leading-relaxed mb-8">
+              <div className="p-8 md:p-12 relative">
+                {/* Открывающая кавычка */}
+                <div className="absolute top-6 left-6 text-7xl text-amber-300/40 select-none font-serif">„</div>
+                {/* Закрывающая кавычка */}
+                <div className="absolute bottom-6 right-6 text-7xl text-amber-300/40 select-none font-serif">“</div>
+                
+                <p className="text-ocean-700 text-lg md:text-xl leading-relaxed px-8 md:px-12 py-4 italic text-center">
                   В далёком морозном крае жил энергичный пингвинёнок Санти, мечтавший о путешествиях и дружбе. 
                   Вместе с мамой Санни и папой Тишей, изобретателем, он решил создать полезную и вкусную еду для детей — 
                   рыбные полуфабрикаты в виде морских животных. Чтобы доставлять их по миру, Тиша построил чудо-корабль, 
                   и с тех пор их путешествия были полны радостных встреч и открытий. Так появился бренд «Санти» — 
                   символ дружбы, заботы и семейного тепла, приносящий детям здоровье и весёлое настроение.
                 </p>
-                <Link
-                  to="/family"
-                  className="inline-block bg-ocean-500 hover:bg-ocean-600 text-white font-black px-8 py-3.5 rounded-2xl transition-all duration-200 hover:scale-105 hover:shadow-xl"
-                >
-                  Познакомиться с семьёй →
-                </Link>
+                
+                {/* Кнопка справа */}
+                <div className="mt-8 flex justify-end">
+                  <Link
+                    to="/family"
+                    className="inline-block bg-ocean-500 hover:bg-ocean-600 text-white font-black px-8 py-3.5 rounded-2xl transition-all duration-200 hover:scale-105 hover:shadow-xl"
+                  >
+                    Познакомиться с семьёй →
+                  </Link>
+                </div>
               </div>
             </div>
 
