@@ -131,7 +131,7 @@ export default function HomePage() {
                 <img
                   src={`${base}images/main_family.png`}
                   alt="Семья Санти"
-                  className="w-full max-w-sm drop-shadow-2xl animate-float"
+                  className="w-full max-w-sm drop-shadow-2xl"
                   onError={(e) => {
                     e.currentTarget.style.display = 'none'
                     e.currentTarget.nextElementSibling.style.display = 'flex'
