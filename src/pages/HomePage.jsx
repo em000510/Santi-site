@@ -48,7 +48,7 @@ export default function HomePage() {
   const heroOpacity = 1 - heroProgress
   const heroScale = 1 - heroProgress * 0.08
 
-  const base = import.meta.env.BASE_URL;
+  const base = import.meta.env.BASE_URL
   return (
     <div className="font-nunito">
       {/* ── HERO (fixed, fades on scroll) ─────────────────────────────── */}
@@ -70,23 +70,22 @@ export default function HomePage() {
         <div className="absolute inset-0 bg-gradient-to-b from-ocean-900/30 via-transparent to-ocean-900/60" />
 
         {/* Hero text */}
-         <div className="absolute inset-0 flex flex-col justify-center items-start px-8 md:px-16 lg:px-24 w-full md:w-1/2">
-         {/* Внутренний контейнер, который центрирует строки относительно «САНТИ» */}
-           <div className="flex flex-col items-center text-center w-full relative left-[2cm]">
-               <p className="text-lg font-bold uppercase tracking-widest opacity-80 mb-3">
-                 Знакомьтесь — семья
-               </p>
-                <img
-                  src={`${base}images/main_logo.png`}
-                  alt="САНТИ"
-                  className="w-auto h-28 md:h-44 lg:h-52 drop-shadow-2xl"
-                />
-               <p className="text-xl md:text-2xl font-semibold mt-5 opacity-90 drop-shadow">
-                 Рыбка, которую любят дети 🐟
-               </p>
-             </div>
-           </div>
-        
+        <div className="absolute inset-0 flex flex-col justify-center items-start px-8 md:px-16 lg:px-24 w-full md:w-1/2">
+          <div className="flex flex-col items-center text-center w-full relative left-[2cm]">
+            <p className="text-lg font-bold uppercase tracking-widest opacity-80 mb-3">
+              Знакомьтесь — семья
+            </p>
+            <img
+              src={`${base}images/main_logo.png`}
+              alt="САНТИ"
+              className="w-auto h-28 md:h-44 lg:h-52 drop-shadow-2xl"
+            />
+            <p className="text-xl md:text-2xl font-semibold mt-5 opacity-90 drop-shadow">
+              Рыбка, которую любят дети 🐟
+            </p>
+          </div>
+        </div>
+
         {/* Scroll hint */}
         <div className="absolute bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 text-white/70 animate-bounce">
           <span className="text-xs font-semibold uppercase tracking-widest">Листай вниз</span>
@@ -148,7 +147,7 @@ export default function HomePage() {
 
               <div className="flex-1 space-y-5">
                 <p className="text-ocean-700 text-lg leading-relaxed">
-                 Нежные рыбные наггетсы из настоящего филе минтая в хрустящей золотистой панировке — это любимый детьми формат и польза, которой доверяют родители. 
+                  Нежные рыбные наггетсы из настоящего филе минтая в хрустящей золотистой панировке — это любимый детьми формат и польза, которой доверяют родители.
                 </p>
                 <p className="text-ocean-700 text-lg leading-relaxed">
                   Мягкий вкус, удобная форма и отсутствие косточек делают знакомство с рыбой легким и позитивным с первых кусочков.
@@ -160,31 +159,6 @@ export default function HomePage() {
                   Познакомиться с семьёй →
                 </Link>
               </div>
-            </div>
-
-            {/* Products */}
-            <h2 className="text-4xl font-black text-ocean-900 text-center mb-10">
-              Наши продукты 🍽️
-            </h2>
-
-            <div className="grid md:grid-cols-2 gap-7 mb-24">
-              {PRODUCTS.map((p) => (
-                <div
-                  key={p.name}
-                  className="rounded-3xl overflow-hidden bg-white shadow-md border border-ocean-100"
-                >
-                  {/* Цветная полоска сверху */}
-                  <div className={`h-2 bg-gradient-to-r ${p.gradient}`} />
-                  <div className="p-8">
-                    <div className={`w-16 h-16 rounded-2xl ${p.iconBg} flex items-center justify-center text-4xl mb-5`}>
-                      {p.emoji}
-                    </div>
-                    <h3 className="text-2xl font-black text-ocean-900 mb-3">{p.name}</h3>
-                    <p className="text-ocean-600 text-base leading-relaxed mb-5">{p.description}</p>
-                    <p className="text-xs font-bold text-ocean-400 uppercase tracking-wider">{p.detail}</p>
-                  </div>
-                </div>
-              ))}
             </div>
 
             {/* ── Benefits ──────────────────────────────────────────── */}
@@ -221,7 +195,7 @@ export default function HomePage() {
               <div className="flex-1 space-y-5">
                 <h3 className="text-3xl font-black text-ocean-800">Только лучшая рыба! 🌊</h3>
                 <p className="text-ocean-700 text-lg leading-relaxed">
-                 В составе — качественное рыбное филе, цельнозерновая мука, натуральные специи и витамины, необходимые растущему организму. Без искусственных добавок— только понятные ингредиенты и вкус, который нравится детям.
+                  В составе — качественное рыбное филе, цельнозерновая мука, натуральные специи и витамины, необходимые растущему организму. Без искусственных добавок — только понятные ингредиенты и вкус, который нравится детям.
                 </p>
                 <Link
                   to="/game"
@@ -233,7 +207,7 @@ export default function HomePage() {
 
               <div className="flex-1 flex justify-center">
                 <img
-                  src={`${base}/images/main_fish.png`}
+                  src={`${base}images/main_fish.png`}
                   alt="Рыбные продукты"
                   className="w-full max-w-sm drop-shadow-2xl"
                   onError={(e) => {
@@ -251,7 +225,6 @@ export default function HomePage() {
             </div>
           </div>
         </div>
-
       </div>
     </div>
   )
