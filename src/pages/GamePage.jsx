@@ -117,9 +117,7 @@ function IntroScreen({ onStart }) {
   )
 }
 
-/* ── WinScreen (экран победы со случайными фактами) ───────────────── */
 function WinScreen({ onReplay }) {
-  // При монтировании выбираем случайный факт для каждого животного
   const base = import.meta.env.BASE_URL
   const [selectedFacts] = useState(() =>
     ANIMALS.map(animal => ({
@@ -145,9 +143,8 @@ function WinScreen({ onReplay }) {
             className="bg-white rounded-3xl shadow-2xl overflow-hidden hover:scale-[1.03] transition-transform duration-300"
             style={{ animationDelay: `${i * 0.15}s` }}
           >
-            {/* Верхняя часть с гифкой и названием */}
             <div className={`bg-gradient-to-br ${animal.gradient} p-6 flex flex-col items-center gap-3`}>
-              <div className="w-32 h-32 rounded-2xl overflow-hidden bg-white/20 flex items-center justify-center shadow-inner">
+              <div className="w-48 h-48 rounded-2xl overflow-hidden bg-white/20 flex items-center justify-center shadow-inner">
                 <img
                   src={`${base}${animal.gifSrc.slice(1)}`}
                   alt={animal.animal}
@@ -157,18 +154,13 @@ function WinScreen({ onReplay }) {
                     e.currentTarget.nextElementSibling.style.display = 'flex'
                   }}
                 />
-                <div
-                  style={{ display: 'none' }}
-                  className="w-full h-full flex items-center justify-center text-6xl"
-                >
+                <div style={{ display: 'none' }} className="w-full h-full flex items-center justify-center text-6xl">
                   {animal.emoji}
                 </div>
               </div>
-              <h3 className="text-2xl font-black text-white">{animal.animal}</h3>
-              <span className="text-3xl">{animal.emoji}</span>   {/* ← эмодзи оставлен */}
+              <h3 className="text-3xl font-black text-white">{animal.animal}</h3>
             </div>
 
-            {/* Нижняя часть с фактом */}
             <div className={`${animal.cardBg} p-6`}>
               <p className="text-ocean-700 text-sm leading-relaxed">{animal.fact}</p>
             </div>
@@ -186,4 +178,5 @@ function WinScreen({ onReplay }) {
       </div>
     </div>
   )
+}
 }
