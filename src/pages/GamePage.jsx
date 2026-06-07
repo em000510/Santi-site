@@ -120,6 +120,7 @@ function IntroScreen({ onStart }) {
 /* ── WinScreen (экран победы со случайными фактами) ───────────────── */
 function WinScreen({ onReplay }) {
   // При монтировании выбираем случайный факт для каждого животного
+  const base = import.meta.env.BASE_URL
   const [selectedFacts] = useState(() =>
     ANIMALS.map(animal => ({
       ...animal,
@@ -148,7 +149,7 @@ function WinScreen({ onReplay }) {
             <div className={`bg-gradient-to-br ${animal.gradient} p-6 flex flex-col items-center gap-3`}>
               <div className="w-32 h-32 rounded-2xl overflow-hidden bg-white/20 flex items-center justify-center shadow-inner">
                 <img
-                  src={animal.gifSrc}
+                  src={`${base}${animal.gifSrc.slice(1)}`}
                   alt={animal.animal}
                   className="w-full h-full object-cover"
                   onError={(e) => {
